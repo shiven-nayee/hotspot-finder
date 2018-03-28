@@ -1,20 +1,52 @@
 import React, { Component, Fragment } from "react";
 
 // Components
-import { Nav, NavItem, NavLink } from "reactstrap";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
 
 class NavMenu extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
   render() {
     return (
-      <nav>
-        <Nav>
-          <h1>Wifi Finder</h1>
-          <NavItem>
-            <NavLink href="#">Find by Zip Code</NavLink>
-          </NavItem>
-        </Nav>
-      </nav>
+      <Fragment>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/">WiFinder</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#">Find by Zipcode</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Find by City</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </Fragment>
     );
   }
 }

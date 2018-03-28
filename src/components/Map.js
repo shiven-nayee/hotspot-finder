@@ -39,12 +39,12 @@ class Map extends Component {
       ))
     );
     return (
-      <div>
+      <div className="map-container">
         <MapComponent
           isMarkerShown
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFdy_ty-E5BHEx6XZTljwb6RXrSIy_14g"
-          loadingElement={<div style={{ height: `100%`, width: `50%` }} />}
-          containerElement={<div style={{ height: `400px`, width: `400px` }} />}
+          loadingElement={<div style={{ height: `400px`, width: `100%` }} />}
+          containerElement={<div style={{ height: `400px`, width: `100%` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>

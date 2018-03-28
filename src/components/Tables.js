@@ -7,13 +7,15 @@ import ListItem from './ListItem';
 class Tables extends Component {
   render() {
     return (
-      <div>
+      <div className="table-container">
         <Table dark>
           <thead>
             <tr>
               <th>Zip Code</th>
               <th>City</th>
               <th>Location</th>
+              <th>Lat</th>
+              <th>Lng</th>
             </tr>
           </thead>
           <tbody>

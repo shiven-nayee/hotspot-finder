@@ -9,6 +9,8 @@ class ListItem extends Component {
                     <td>{this.props.zip}</td>
                     <td>{this.props.city}</td>
                     <td>{this.props.location}</td>
+                    <td>{this.props.latitude}</td>
+                    <td>{this.props.longitude}</td>
                 </tr>
             </Fragment>
          )
