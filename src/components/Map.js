@@ -14,7 +14,10 @@ class Map extends Component {
       withGoogleMap(props => (
         <GoogleMap
           defaultZoom={14}
-          defaultCenter={{ lat: 40.728299, lng: -73.856071 }}
+          defaultCenter={{
+            lat: this.props.data[0].location_lat_long.coordinates[1],
+            lng: this.props.data[0].location_lat_long.coordinates[0]
+          }}
         >
           {this.props.data.map((dat, index) => {
             console.log({
