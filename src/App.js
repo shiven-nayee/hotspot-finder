@@ -8,6 +8,7 @@ import "./css/App.css";
 // Component Imports
 import ApiForm from "./components/ApiForm";
 import NavMenu from "./components/NavMenu";
+import Footer from './components/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -52,12 +53,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{fontFamily: "Montserrat"}}>
         <NavMenu />
         <ApiForm
           handleKeyChange={this.handleKeyChange}
           data={this.state.data}
         />
+        <Footer />
       </div>
     );
   }

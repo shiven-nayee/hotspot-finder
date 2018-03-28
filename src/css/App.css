@@ -1,8 +1,11 @@
-.nav {
-  width: 100%; }
+body {
+  font-family: Montserrat; }
 
 .nav-item {
   text-align: center; }
+
+table {
+  color: #cecece; }
 
 .enterZip {
   background-color: #21252a;
@@ -15,6 +18,13 @@
 
 .zipField {
   width: 200px;
-  height: 50px;
+  height: 40px;
   margin: 20px;
   border-radius: 4%; }
+
+footer {
+  text-align: center;
+  background-color: #cecece;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -16px; }

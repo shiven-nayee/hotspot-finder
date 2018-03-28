@@ -17,7 +17,7 @@ class ApiForm extends Component {
             onChange={this.props.handleKeyChange}
           />
           <Button id="submit" color="info">
-            Add Zip Code
+            Find by Zipcode
           </Button>
         </form>
           <Map data={this.props.data} />

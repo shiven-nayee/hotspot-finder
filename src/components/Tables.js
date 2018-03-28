@@ -8,7 +8,7 @@ class Tables extends Component {
   render() {
     return (
       <div className="table-container">
-        <Table dark>
+        <Table dark style={{color: '#cecece' }}>
           <thead>
             <tr>
               <th>Zip Code</th>
