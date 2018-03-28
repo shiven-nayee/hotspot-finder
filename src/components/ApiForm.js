@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 
 // Components
 import Tables from "./Tables";
+import Map from './Map';
 
 class ApiForm extends Component {
   render() {
@@ -18,6 +19,8 @@ class ApiForm extends Component {
           </button>
         </form>
         <Tables
+        data={this.props.data}/>
+        <Map 
         data={this.props.data}/>
       </Fragment>
     );

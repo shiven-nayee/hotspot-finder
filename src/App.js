@@ -1,13 +1,13 @@
 // Components
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 // CSS
-import './css/App.css';
+import "./css/App.css";
 
 // Component Imports
-import ApiForm from './components/ApiForm';
-import NavMenu from './components/NavMenu';
+import ApiForm from "./components/ApiForm";
+import NavMenu from "./components/NavMenu";
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ class App extends Component {
     this.state = {
       zip: 12345,
       data: [],
+      mapData: {},
       zipCode: "11374"
     };
 
@@ -30,8 +31,7 @@ class App extends Component {
       const response = await axios.get(
         `https://data.cityofnewyork.us/resource/24t3-xqyv.json?zip=${zipCode}`
       );
-      this.setState({ data: response.data },
-      function() {
+      this.setState({ data: response.data }, function() {
         console.log(this.state.data);
       });
     } catch (error) {
@@ -50,25 +50,14 @@ class App extends Component {
     });
   }
 
-   initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
-    var map = new google.maps.Map(document.getElementsByClassName('map'), {
-      zoom: 4,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
-
   render() {
     return (
       <div className="App">
         <NavMenu />
-        <ApiForm 
-        handleKeyChange={this.handleKeyChange} 
-        data={this.state.data}/>
+        <ApiForm
+          handleKeyChange={this.handleKeyChange}
+          data={this.state.data}
+        />
       </div>
     );
   }
