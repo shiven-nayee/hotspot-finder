@@ -2,23 +2,28 @@ import React, { Component } from "react";
 
 // Components
 import { Table } from 'reactstrap';
+import ListItem from './ListItem';
 
 class Tables extends Component {
   render() {
     return (
       <div>
-        <Table striped>
+        <Table dark>
           <thead>
             <tr>
-              <th>Exercise</th>
-              <th># of Sets</th>
-              <th># of Reps</th>
-              <th>Weight</th>
+              <th>Zip Code</th>
+              <th>City</th>
+              <th>Location</th>
             </tr>
           </thead>
           <tbody>
             {this.props.data.map((list, index) => {
-            //   return <Exercise {...exercise} key={index} index={index} />;
+                return (
+                    <ListItem 
+                    {...list} 
+                    key={index}
+                    index={index}/>
+                )
             })}
           </tbody>
         </Table>

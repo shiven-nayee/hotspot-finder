@@ -17,6 +17,8 @@ class ApiForm extends Component {
             Add Zip Code
           </button>
         </form>
+        <Tables
+        data={this.props.data}/>
       </Fragment>
     );
   }

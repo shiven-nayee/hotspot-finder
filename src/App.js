@@ -7,7 +7,7 @@ import './css/App.css';
 
 // Component Imports
 import ApiForm from './components/ApiForm';
-import Nav from './components/Nav';
+import NavMenu from './components/NavMenu';
 
 class App extends Component {
   constructor(props) {
@@ -50,10 +50,22 @@ class App extends Component {
     });
   }
 
+   initMap() {
+    var uluru = {lat: -25.363, lng: 131.044};
+    var map = new google.maps.Map(document.getElementsByClassName('map'), {
+      zoom: 4,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <Nav />
+        <NavMenu />
         <ApiForm 
         handleKeyChange={this.handleKeyChange} 
         data={this.state.data}/>
