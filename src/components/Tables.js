@@ -14,8 +14,8 @@ class Tables extends Component {
               <th>Zip Code</th>
               <th>City</th>
               <th>Location</th>
-              <th>Lat</th>
-              <th>Lng</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -24,7 +24,7 @@ class Tables extends Component {
                     <ListItem 
                     {...list} 
                     key={index}
-                    index={index}/>
+                    index={index} />
                 )
             })}
           </tbody>

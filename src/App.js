@@ -17,7 +17,8 @@ class App extends Component {
       zip: 12345,
       data: [],
       mapData: {},
-      zipCode: "11374"
+      zipCode: "11374",
+      userData: []
     };
 
     this.handleKeyChange = this.handleKeyChange.bind(this);
@@ -32,14 +33,20 @@ class App extends Component {
       const response = await axios.get(
         `https://data.cityofnewyork.us/resource/24t3-xqyv.json?zip=${zipCode}`
       );
+      const userResponse = await axios.get("http://localhost:8080/users");
       this.setState({ data: response.data }, function() {
-        console.log(this.state.data);
+        console.log("API Data: ", this.state.data);
+      });
+      this.setState({ userData: userResponse.data }, function() {
+        console.log("User Data: ",this.state.userData);
       });
     } catch (error) {
       console.log("Error retrieving ideas!");
       console.log(error);
     }
   }
+
+  ;
 
   async handleKeyChange(event) {
     console.log("inside func");
@@ -53,7 +60,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" style={{fontFamily: "Montserrat"}}>
+      <div className="App" style={{ fontFamily: "Montserrat" }}>
         <NavMenu />
         <ApiForm
           handleKeyChange={this.handleKeyChange}
