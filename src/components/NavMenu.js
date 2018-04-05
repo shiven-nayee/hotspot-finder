@@ -34,10 +34,10 @@ class NavMenu extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Find by Zipcode</NavLink>
+                <NavLink href="/">Search</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Find by City</NavLink>
+                <NavLink href="/favorites">Favorites</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

@@ -10,12 +10,9 @@ class ListItem extends Component {
     return (
       <Fragment>
         <tr>
-          {/* {console.log(this.props)} */}
           <td>{this.props.zip}</td>
           <td>{this.props.city}</td>
           <td>{this.props.location}</td>
-          {/* <td>{this.props.latitude}</td>
-                    <td>{this.props.longitude}</td> */}
           <td>
             <Button
               color="success"
@@ -41,11 +38,11 @@ class ListItem extends Component {
               +
             </Button>
           </td>
-          <td>
+          {/* <td>
             <Button color="danger" style={buttonStyle}>
               -
             </Button>
-          </td>
+          </td> */}
         </tr>
       </Fragment>
     );

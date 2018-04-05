@@ -15,7 +15,7 @@ class Tables extends Component {
               <th>City</th>
               <th>Location</th>
               <th></th>
-              <th></th>
+              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>

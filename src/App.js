@@ -6,7 +6,7 @@ import axios from "axios";
 import "./css/App.css";
 
 // Component Imports
-import ApiForm from "./components/ApiForm";
+import Body from "./components/Body";
 import NavMenu from "./components/NavMenu";
 import Footer from './components/Footer';
 
@@ -62,7 +62,7 @@ class App extends Component {
     return (
       <div className="App" style={{ fontFamily: "Montserrat" }}>
         <NavMenu />
-        <ApiForm
+        <Body
           handleKeyChange={this.handleKeyChange}
           data={this.state.data}
         />
