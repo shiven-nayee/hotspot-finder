@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 
 // Components
 import Search from './Search';
+import Favorites from './Favorites';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class Body extends Component {
@@ -24,9 +25,11 @@ class Body extends Component {
       <Fragment>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => {
-            console.log('inside');
-            return <Search data={this.props.data} />
+          <Route exact path="/" render={(routeProps) => {
+            return <Search data={this.props.data} routeProps={routeProps} handleKeyChange={this.props.handleKeyChange}/>
+          }} />
+          <Route exact path="/favorites" render={(routeProps) => {
+            return <Favorites data={this.props.userData} routeProps={routeProps}/>
           }} />
         </Switch>
       </Router>

@@ -30,6 +30,7 @@ class Search extends Component {
     render() { 
         return (
             <Fragment>
+            {console.log('location', this.props.routeProps.location.pathname)}
             <form className="enterZip" onSubmit={this.props.handleSubmit}>
               <input
                 className="zipField"
@@ -45,7 +46,7 @@ class Search extends Component {
                 </DropdownMenu>
               </ButtonDropdown>
             </form>
-            <Map data={this.props.data} />
+            <Map data={this.props.data} routeProps={this.props.routeProps}/>
             <Tables data={this.props.data} />
           </Fragment>
          )

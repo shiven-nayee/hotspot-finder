@@ -65,6 +65,7 @@ class App extends Component {
         <Body
           handleKeyChange={this.handleKeyChange}
           data={this.state.data}
+          userData={this.state.userData}
         />
         <Footer />
       </div>

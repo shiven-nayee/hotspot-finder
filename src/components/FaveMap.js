@@ -14,24 +14,24 @@ class Map extends Component {
     const MapComponent = withScriptjs(
       withGoogleMap(props => (
         <GoogleMap
-          defaultZoom={14}
+          defaultZoom={10}
           defaultCenter={{
-                lat: this.props.data[0].location_lat_long.coordinates[1],
-                lng: this.props.data[0].location_lat_long.coordinates[0]
+                lat: Number(this.props.data[0].lat),
+                lng: Number(this.props.data[0].lng)
               }
             }
         >
           {this.props.data.map((dat, index) => {
             console.log({
-              lat: dat.location_lat_long.coordinates[1],
-              lng: dat.location_lat_long.coordinates[0]
+              lat: Number(dat.lat),
+              lng: Number(dat.lng)
             });
             return (
               <Marker
                 key={index}
                 position={{
-                  lat: dat.location_lat_long.coordinates[1],
-                  lng: dat.location_lat_long.coordinates[0]
+                  lat: Number(dat.lat),
+                  lng: Number(dat.lng)
                 }}
               />
             );
