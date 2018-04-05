@@ -29,6 +29,7 @@ class ListItem extends Component {
                       zip: this.props.zip
                     }
                   );
+                  console.log("Favorite response: ", newFavoriteResponse);
                 } catch (error) {
                   console.log(error);
                   console.log("Could not add favorite");
@@ -38,11 +39,6 @@ class ListItem extends Component {
               +
             </Button>
           </td>
-          {/* <td>
-            <Button color="danger" style={buttonStyle}>
-              -
-            </Button>
-          </td> */}
         </tr>
       </Fragment>
     );

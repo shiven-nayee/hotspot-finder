@@ -4,8 +4,6 @@ import React, { Component, Fragment } from 'react';
 import Tables from "./Tables";
 import Map from "./Map";
 import {
-  Button,
-  ButtonGroup,
   ButtonDropdown,
   DropdownToggle,
   DropdownItem,

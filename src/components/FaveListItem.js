@@ -21,6 +21,7 @@ class FaveListItem extends Component {
                   const newFavoriteResponse = axios.delete(
                     `http://localhost:8080/users/${this.props.id}`
                   )
+                  console.log(newFavoriteResponse);
                 } catch (error) {
                   console.log(error);
                   console.log("Could not add favorite");

@@ -10,7 +10,6 @@ import {
 
 class Map extends Component {
   render() {
-    const location = this.props.routeProps.location.pathname;
     const MapComponent = withScriptjs(
       withGoogleMap(props => (
         <GoogleMap

@@ -1,17 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
 // Components
-import Tables from "./FaveTables";
 import FaveMap from "./FaveMap";
 import FaveTables from './FaveTables';
-import {
-  Button,
-  ButtonGroup,
-  ButtonDropdown,
-  DropdownToggle,
-  DropdownItem,
-  DropdownMenu
-} from "reactstrap";
 
 class Favorites extends Component {
     constructor(props) {
