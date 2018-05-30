@@ -24,7 +24,7 @@ class App extends Component {
     this.handleKeyChange = this.handleKeyChange.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getData(11374);
   }
 
@@ -33,7 +33,7 @@ class App extends Component {
       const response = await axios.get(
         `https://data.cityofnewyork.us/resource/24t3-xqyv.json?zip=${zipCode}`
       );
-      const userResponse = await axios.get("http://18.188.197.159:8080/users");
+      const userResponse = await axios.get(process.env.REACT_APP_HOST+"/users");
       this.setState({ data: response.data }, function() {
         console.log("API Data: ", this.state.data);
       });
@@ -67,6 +67,7 @@ class App extends Component {
           data={this.state.data}
           userData={this.state.userData}
         />
+        {console.log(process.env.REACT_APP_HOST)}
         <Footer />
       </div>
     );

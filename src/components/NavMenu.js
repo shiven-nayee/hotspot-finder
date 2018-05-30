@@ -10,6 +10,7 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
+import logo from './wifi.png';
 
 class NavMenu extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class NavMenu extends Component {
     return (
       <Fragment>
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">WiFinder</NavbarBrand>
+          <NavbarBrand href="/"><img src={logo} className="logo" alt="WiFinder Logo"/>WiFinder</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

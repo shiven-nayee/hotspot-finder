@@ -4,10 +4,7 @@ import React, { Component, Fragment } from 'react';
 import Tables from "./Tables";
 import Map from "./Map";
 import {
-  ButtonDropdown,
-  DropdownToggle,
-  DropdownItem,
-  DropdownMenu
+  Button
 } from "reactstrap";
 
 class Search extends Component {
@@ -29,20 +26,16 @@ class Search extends Component {
         return (
             <Fragment>
             {console.log('location', this.props.routeProps.location.pathname)}
-            <form className="enterZip" onSubmit={this.props.handleSubmit}>
+            <form className="enterZip">
               <input
                 className="zipField"
                 type="text"
                 placeholder="Enter a zip code"
                 onChange={this.props.handleKeyChange}
               />
-              <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                <DropdownToggle caret>Find by: </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>Zip</DropdownItem>
-                  <DropdownItem>City</DropdownItem>
-                </DropdownMenu>
-              </ButtonDropdown>
+              <Button>
+                Search
+              </Button>
             </form>
             <Map data={this.props.data} routeProps={this.props.routeProps}/>
             <Tables data={this.props.data} />

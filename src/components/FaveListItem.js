@@ -19,7 +19,7 @@ class FaveListItem extends Component {
                 console.log("clicked");
                 try {
                   const newFavoriteResponse = axios.delete(
-                    `http://localhost:8080/users/${this.props.id}`
+                    (`http://ec2-54-197-40-57.compute-1.amazonaws.com:8080/users/${this.props.id}`)
                   )
                   console.log(newFavoriteResponse);
                 } catch (error) {

@@ -21,7 +21,7 @@ class ListItem extends Component {
                 console.log("clicked");
                 try {
                   const newFavoriteResponse = axios.post(
-                    "http://localhost:8080/users/add",
+                    process.env.REACT_APP_HOST + "/users/add",
                     {
                       userName: "Favorite",
                       lat: this.props.latitude,
